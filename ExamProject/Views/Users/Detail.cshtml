@@ -1,0 +1,15 @@
+﻿@model UserViewModel
+@{
+    ViewData["Title"] = "Detail";
+}
+
+<div class="row">
+    <div class="col-12">
+        <strong>Name:</strong> @Model.User.Name<br>
+        <strong>Alias:</strong> @Model.User.Alias<br>
+        <strong>Email:</strong> @Model.User.Email<br>
+        <hr />
+        <strong>Total number of ideas:</strong> @Model.IdeaCount<br>
+        <strong>Total number of likes:</strong> @Model.LikeCount<br>
+    </div>
+</div>

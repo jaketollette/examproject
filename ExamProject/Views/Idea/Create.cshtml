@@ -1,0 +1,12 @@
+﻿@model IdeaViewModel
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h2>New Idea</h2>
+<div class="row">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <div class="col-12">
+        @{ await Html.RenderPartialAsync("_CreateIdeaForm", Model); }
+    </div>
+</div>

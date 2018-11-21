@@ -1,0 +1,19 @@
+﻿@model AccountPageViewModel
+@{
+    ViewData["Title"] = "Index";
+}
+<div class="row">
+    <div class="col-12"><h1>Welcome!</h1></div>
+</div>
+<div class="row">
+    <div class="col-12 col-md-5">
+        @{ await Html.RenderPartialAsync("_RegisterFormPartial", Model.RegisterViewModel); }
+    </div>
+    <div class="col-12 col-md-5 offset-md-1">
+        @{ await Html.RenderPartialAsync("_LoginFormPartial", Model.LoginViewModel); }
+    </div>
+</div>
+
+@section Scripts {
+    @{  await Html.RenderPartialAsync("_ValidationScriptsPartial"); }
+}
